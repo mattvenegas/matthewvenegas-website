@@ -36,6 +36,11 @@ header {
     background-image: url('Icons/logo_hover.png');
 }
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
 nav a {
     color: #ffffff;
     text-decoration: none;
@@ -95,7 +100,7 @@ nav a.active {
         align-items: center;
     }
     nav a {
-        margin-left: 8px;
-        font-size: 11px;
+        margin-left: 6px;
+        font-size: 10px;
     }
 }
