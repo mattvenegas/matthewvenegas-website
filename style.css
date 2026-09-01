@@ -81,3 +81,5 @@ nav a.active {
     color: #900000;
     text-decoration: underline;
 }
+
+@media (max-width: 600px) { header { flex-direction: column; gap: 15px; padding: 20px; } }
