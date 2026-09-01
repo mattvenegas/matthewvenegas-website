@@ -85,11 +85,14 @@ nav a.active {
 @media (max-width: 600px) {
     header {
         padding: 15px 15px;
-        align-items: center;
     }
     .logo-link {
         width: 100px;
         height: 35px;
+    }
+    nav {
+        display: flex;
+        align-items: center;
     }
     nav a {
         margin-left: 8px;
