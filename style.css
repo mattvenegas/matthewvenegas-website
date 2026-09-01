@@ -31,6 +31,7 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     align-self: center;
+    transform: translateY(20px);
 }
 
 .logo-link:hover {
