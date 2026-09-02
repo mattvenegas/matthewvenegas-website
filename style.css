@@ -10,6 +10,10 @@ body {
     color: #ffffff;
 }
 
+body.home-page {
+    position: relative;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -22,6 +26,10 @@ header {
     box-sizing: border-box;
     background-color: #7B1D1D;
     transition: background-color 0.3s ease;
+}
+
+body.home-page header {
+    justify-content: center;
 }
 
 header:has(.logo-link:hover) {
@@ -59,6 +67,10 @@ header:has(.logo-link:hover) nav a.active::before {
     text-decoration: none;
 }
 
+body.home-page .logo-link {
+    background-position: center;
+}
+
 .logo-link:hover {
     background-image: url('Icons/logo_hover2.png');
 }
@@ -79,6 +91,31 @@ nav a {
     transition: color 0.3s ease;
     padding: 10px 15px;
     display: inline-block;
+}
+
+body.home-page .content nav a {
+    margin: 0;
+}
+
+body.home-page .home-nav {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+body.home-page .home-nav::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background-color: #ffffff;
 }
 
 nav a::before {
@@ -129,7 +166,7 @@ nav a.active::before {
 }
 
 nav:hover a.active::before {
-    height: 0%;
+    height: 10%;
 }
 
 nav:has(a:not(.active):hover) a.active {
@@ -186,5 +223,17 @@ nav a.active:hover::before {
     nav a {
         margin-left: 6px;
         font-size: 10px;
+    }
+    body.home-page .content nav a {
+        margin: 0;
+    }
+    body.home-page .home-nav {
+        top: 75px;
+        width: 100%;
+        padding: 0 20px;
+    }
+    body.home-page .home-nav::after {
+        left: 20px;
+        right: 20px;
     }
 }
