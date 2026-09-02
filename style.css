@@ -177,6 +177,10 @@ a, button, .logo-link, .email-link {
     cursor: none;
 }
 
+#live-clock {
+    white-space: nowrap;
+}
+
 @media (max-width: 600px) {
     header {
         padding: 15px 15px;
@@ -192,5 +196,6 @@ a, button, .logo-link, .email-link {
     #live-clock {
         font-size: 11px;
         letter-spacing: 1px;
+        white-space: nowrap;
     }
 }
