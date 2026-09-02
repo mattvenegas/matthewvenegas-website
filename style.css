@@ -8,10 +8,7 @@ body {
     align-items: center;
     font-family: sans-serif;
     color: #ffffff;
-}
-
-body.home-page {
-    position: relative;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12" stroke="white" stroke-width="2"/><line x1="0" y1="6" x2="12" y2="6" stroke="white" stroke-width="2"/></svg>') 6 6, crosshair;
 }
 
 header {
@@ -26,10 +23,7 @@ header {
     box-sizing: border-box;
     background-color: #7B1D1D;
     transition: background-color 0.3s ease;
-}
-
-body.home-page header {
-    justify-content: center;
+    z-index: 1000;
 }
 
 header:has(.logo-link:hover) {
@@ -67,10 +61,6 @@ header:has(.logo-link:hover) nav a.active::before {
     text-decoration: none;
 }
 
-body.home-page .logo-link {
-    background-position: center;
-}
-
 .logo-link:hover {
     background-image: url('Icons/logo_hover2.png');
 }
@@ -91,31 +81,6 @@ nav a {
     transition: color 0.3s ease;
     padding: 10px 15px;
     display: inline-block;
-}
-
-body.home-page .content nav a {
-    margin: 0;
-}
-
-body.home-page .home-nav {
-    position: absolute;
-    top: 85px;
-    left: 0;
-    width: 100%;
-    padding: 0 40px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-}
-
-body.home-page .home-nav::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 40px;
-    right: 40px;
-    height: 2px;
-    background-color: #ffffff;
 }
 
 nav a::before {
@@ -208,6 +173,10 @@ nav a.active:hover::before {
     left: 0;
 }
 
+a, button, .logo-link, .email-link {
+    cursor: none;
+}
+
 @media (max-width: 600px) {
     header {
         padding: 15px 15px;
@@ -216,24 +185,8 @@ nav a.active:hover::before {
         width: 120px;
         height: 25px;
     }
-    nav {
-        display: flex;
-        align-items: center;
-    }
     nav a {
         margin-left: 6px;
         font-size: 10px;
-    }
-    body.home-page .content nav a {
-        margin: 0;
-    }
-    body.home-page .home-nav {
-        top: 75px;
-        width: 100%;
-        padding: 0 20px;
-    }
-    body.home-page .home-nav::after {
-        left: 20px;
-        right: 20px;
     }
 }
