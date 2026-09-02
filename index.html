@@ -6,7 +6,12 @@
     <title>About</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../Icons/Icon_White.png">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <style>
+        body, *, header, nav a, p, #live-clock {
+            font-family: 'Courier Prime', monospace !important;
+        }
         #live-clock-wrapper {
             position: fixed;
             bottom: 20px;
@@ -28,17 +33,11 @@
             border-style: solid;
             opacity: 0;
             transform: scale(0.5);
-            transition: opacity 0.25s ease, transform 0.25s ease;
         }
         .corner-tl { top: 0; left: 0; border-width: 1px 0 0 1px; }
         .corner-tr { top: 0; right: 0; border-width: 1px 1px 0 0; }
         .corner-bl { bottom: 0; left: 0; border-width: 0 0 1px 1px; }
         .corner-br { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
-
-        #live-clock-wrapper:hover .corner {
-            opacity: 1;
-            transform: scale(1);
-        }
     </style>
 </head>
 <body class="home-page">
@@ -72,6 +71,30 @@
         }
         setInterval(updateClock, 1000);
         updateClock();
+
+        const wrapper = document.getElementById('live-clock-wrapper');
+        const corners = wrapper.querySelectorAll('.corner');
+
+        wrapper.addEventListener('mouseenter', () => {
+            anime({
+                targets: corners,
+                opacity: 1,
+                scale: 1,
+                duration: 300,
+                easing: 'easeOutExpo',
+                delay: anime.stagger(40)
+            });
+        });
+
+        wrapper.addEventListener('mouseleave', () => {
+            anime({
+                targets: corners,
+                opacity: 0,
+                scale: 0.5,
+                duration: 200,
+                easing: 'easeInExpo'
+            });
+        });
     </script>
 </body>
 </html>
