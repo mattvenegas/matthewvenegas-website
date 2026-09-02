@@ -128,8 +128,12 @@ nav a.active::before {
     height: 100%;
 }
 
-nav:hover nav a.active::before {
+nav:hover a.active::before {
     height: 0%;
+}
+
+nav:has(a:not(.active):hover) a.active {
+    color: #ffffff;
 }
 
 nav a.active:hover::before {
