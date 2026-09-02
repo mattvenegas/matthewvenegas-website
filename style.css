@@ -21,38 +21,39 @@ header {
     padding: 20px 40px;
     box-sizing: border-box;
     background-color: #7B1D1D;
+    transition: background-color 0.3s ease;
+}
+
+header:has(.logo-link:hover) {
+    background-color: #ffffff;
+}
+
+header:has(.logo-link:hover) nav a {
+    color: #7B1D1D;
+}
+
+header:has(.logo-link:hover) nav a::before {
+    background-color: #7B1D1D;
+}
+
+header:has(.logo-link:hover) nav a:hover {
+    color: #ffffff;
 }
 
 .logo-link {
-    display: inline-block;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 50px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    color: #ffffff;
+    display: block;
+    width: 160px;
+    height: 35px;
+    background-image: url('Icons/logo_white.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
     text-decoration: none;
-    align-self: center;
 }
 
-.logo-link .char {
-    display: inline-block;
-    transition: transform 0.3s ease;
+.logo-link:hover {
+    background-image: url('Icons/logo_hover2.png');
 }
-
-.logo-link:hover .char:nth-child(1)  { transform: translate(-2px, -3px) rotate(-5deg); }
-.logo-link:hover .char:nth-child(2)  { transform: translate(1px, 2px) rotate(4deg); }
-.logo-link:hover .char:nth-child(3)  { transform: translate(-1px, -2px) rotate(-3deg); }
-.logo-link:hover .char:nth-child(4)  { transform: translate(2px, 3px) rotate(4deg); }
-.logo-link:hover .char:nth-child(5)  { transform: translate(-2px, 1px) rotate(-4deg); }
-.logo-link:hover .char:nth-child(6)  { transform: translate(1px, -3px) rotate(3deg); }
-.logo-link:hover .char:nth-child(7)  { transform: translate(-1px, 2px) rotate(-6deg); }
-.logo-link:hover .char:nth-child(9)  { transform: translate(2px, -1px) rotate(5deg); }
-.logo-link:hover .char:nth-child(10) { transform: translate(-2px, 3px) rotate(-3deg); }
-.logo-link:hover .char:nth-child(11) { transform: translate(1px, -2px) rotate(2deg); }
-.logo-link:hover .char:nth-child(12) { transform: translate(-1px, 1px) rotate(-5deg); }
-.logo-link:hover .char:nth-child(13) { transform: translate(2px, -3px) rotate(3deg); }
-.logo-link:hover .char:nth-child(14) { transform: translate(-1px, 2px) rotate(-4deg); }
-.logo-link:hover .char:nth-child(15) { transform: translate(1px, -1px) rotate(6deg); }
 
 nav {
     display: flex;
@@ -163,8 +164,8 @@ nav a.active:hover::before {
         padding: 15px 15px;
     }
     .logo-link {
-        font-size: 20px;
-        letter-spacing: 2px;
+        width: 120px;
+        height: 25px;
     }
     nav {
         display: flex;
