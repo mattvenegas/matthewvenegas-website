@@ -163,7 +163,8 @@ nav a.active:hover::before {
         padding: 15px 15px;
     }
     .logo-link {
-        font-size: 30px;
+        font-size: 20px;
+        letter-spacing: 2px;
     }
     nav {
         display: flex;
