@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
+    font-family: 'Courier Prime', monospace;
     color: #ffffff;
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12" stroke="white" stroke-width="2"/><line x1="0" y1="6" x2="12" y2="6" stroke="white" stroke-width="2"/></svg>') 6 6, crosshair;
 }
@@ -188,5 +188,9 @@ a, button, .logo-link, .email-link {
     nav a {
         margin-left: 6px;
         font-size: 10px;
+    }
+    #live-clock {
+        font-size: 11px;
+        letter-spacing: 1px;
     }
 }
