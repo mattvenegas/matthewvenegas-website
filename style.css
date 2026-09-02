@@ -40,6 +40,14 @@ header:has(.logo-link:hover) nav a:hover {
     color: #ffffff;
 }
 
+header:has(.logo-link:hover) nav a.active {
+    color: #ffffff;
+}
+
+header:has(.logo-link:hover) nav a.active::before {
+    background-color: #7B1D1D;
+}
+
 .logo-link {
     display: block;
     width: 160px;
