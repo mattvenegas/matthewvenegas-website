@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../Icons/Icon_White.png">
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <style>
         body, *, header, nav a, p, .email-link {
             font-family: 'Courier Prime', monospace !important;
@@ -26,7 +25,29 @@
     </header>
 
     <div class="content">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=matthewvenegas0407@gmail.com" target="_blank" class="email-link">matthewvenegas0407@gmail.com</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=matthewvenegas0407@gmail.com" target="_blank" class="email-link">Send an E-mail here</a>
     </div>
+
+    <script type="module">
+        import { animate, scrambleText } from 'https://cdn.jsdelivr.net/npm/animejs@4.5.0/+esm';
+
+        const emailLink = document.querySelector('.email-link');
+        const originalText = "Send an E-mail here";
+        const emailText = "matthewvenegas0407@gmail.com";
+
+        emailLink.addEventListener('mouseenter', () => {
+            animate(emailLink, {
+                innerHTML: scrambleText({ text: emailText }),
+                duration: 800
+            });
+        });
+
+        emailLink.addEventListener('mouseleave', () => {
+            animate(emailLink, {
+                innerHTML: scrambleText({ text: originalText }),
+                duration: 800
+            });
+        });
+    </script>
 </body>
 </html>
